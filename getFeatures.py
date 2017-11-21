@@ -17,7 +17,6 @@ def getFeatures(img, bbox):
   #TODO: Your code here
     import numpy as np
     import cv2
-    import detectFace
     import scipy
     from skimage.feature import corner_shi_tomasi,corner_harris
     #img=cv2.imread('many.jpg')
@@ -57,15 +56,3 @@ def getFeatures(img, bbox):
 #cv2.waitKey(0)
 #cv2.destroyAllWindows()
 
-#gray=corner_harris(gray) #harris corner detection
-#grayidx=(gray>0.35) #threshold suppression index
-#gray=gray*grayidx #filter out values less than threshold
-#neighbors=np.ones((3,3)) #define neighbors for local max sup.
-#localM=scipy.ndimage.filters.maximum_filter(gray,footprint=neighbors)#find value of local max
-#msk=(gray==localM) #find boolean map
-#msk=msk*gray#compute new gray image 
-#tf=np.where(msk>0)
-#cv2.imshow('fig1',msk)
-#cv2.waitKey(0)
-#cv2.destroyAllWindows()
-#  return x, y
