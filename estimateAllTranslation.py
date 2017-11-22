@@ -49,5 +49,5 @@ def estimateAllTranslation(startXs, startYs, img1, img2):
               newx,newy=estimateFeatureTranslation(x,y,Ix,Iy,gray1smooth,gray2smooth)
           newXs[j,i]=newx
           newYs[j,i]=newy
-  return newXs
+  return newXs, newYs
 #  return newXs, newYs

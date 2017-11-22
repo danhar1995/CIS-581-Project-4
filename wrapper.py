@@ -29,8 +29,8 @@ frameSet=frameSet[:-1]
 bbox=detectFace(frameSet[0])
 gray=cv2.cvtColor(frameSet[0],cv2.COLOR_BGR2GRAY)
 x,y=getFeatures(gray,bbox)
-grad =estimateAllTranslation(x,y,frameSet[0],frameSet[1])
-print grad
+newXs,newYs =estimateAllTranslation(x,y,frameSet[0],frameSet[1])
+
 #plt.imshow(grad, cmap='gray')
 #cv2.imshow('fig1',frameSet[0])
 #cv2.waitKey(0)
