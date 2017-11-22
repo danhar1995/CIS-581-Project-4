@@ -20,6 +20,6 @@
 def estimateFeatureTranslation(startX, startY, Ix, Iy, img1, img2):
   #TODO: Your code here
   
-  newX=startX+u
-  newY=startY+v
+  newX=startX+2
+  newY=startY+2
   return newX, newY
