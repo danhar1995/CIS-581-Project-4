@@ -21,7 +21,7 @@ def getFeatures(img, bbox):
     from skimage.feature import corner_shi_tomasi,corner_harris
     #img=cv2.imread('many.jpg')
     #bbox=detectFace.detectFace(img)
-    gray=cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+#    gray=cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     [row,col,dim]=np.asarray(bbox.shape)
     bbox=bbox.astype(int)
     neighbors=np.ones((3,3))
@@ -29,9 +29,9 @@ def getFeatures(img, bbox):
     ycoord=[]
     numPt=0
     for i in range(row):
-        currentFace=gray[bbox[i,0,1]:bbox[i,2,1],bbox[i,0,0]:bbox[i,1,0]]
+        currentFace=img[bbox[i,0,1]:bbox[i,2,1],bbox[i,0,0]:bbox[i,1,0]]
         currentFace=corner_harris(currentFace)
-        idx=(currentFace>0.5)
+        idx=(currentFace>0.15)
         currentFace=currentFace*idx
         localM=scipy.ndimage.filters.maximum_filter(currentFace,footprint=neighbors)
         msk=(currentFace==localM)
