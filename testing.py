@@ -17,5 +17,6 @@ z=np.array([[1,2,3,4,5],[1,2,3,4,5],[1,2,3,4,5],[1,2,3,4,5],[0,0,0,0,0]])
 xv, yv = np.meshgrid(x, y, sparse=False, indexing='xy')
 
 interF= scipy.interpolate.interp2d(xv, yv, z, kind='linear')
-start=10
-print np.arange(start-5,start+5,1)
+xs=np.linspace(1,2,10)
+ys=np.linspace(1,2,10)
+zs=interF(xs,ys)
