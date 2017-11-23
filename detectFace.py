@@ -27,4 +27,5 @@ def detectFace(img):
   for i in range(len(face)):
      bbox[i,:,0]=np.array([face[i,0],face[i,0]+face[i,2],face[i,0]+face[i,2],face[i,0]])
      bbox[i,:,1]=np.array([face[i,1],face[i,1],face[i,1]+face[i,3],face[i,1]+face[i,3]])
+  
   return bbox
