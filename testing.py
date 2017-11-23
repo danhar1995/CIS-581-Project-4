@@ -6,6 +6,8 @@ Created on Wed Nov 22 14:19:06 2017
 """
 import numpy as np 
 import scipy 
+import cv2
+import skimage 
 
 
 col=10
@@ -20,3 +22,5 @@ interF= scipy.interpolate.interp2d(xv, yv, z, kind='linear')
 xs=np.linspace(1,2,10)
 ys=np.linspace(1,4,10)
 zs=interF(xs,ys)
+
+

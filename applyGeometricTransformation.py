@@ -20,5 +20,9 @@
 
 def applyGeometricTransformation(startX, startY, newXs, newYs, bbox):
   #TODO: Your code here
+  import numpy as np 
+  import skimage.transform
   
+  
+  [row,col]=np.asarray(startX.shape)  
   return Xs, Ys, newbbox
