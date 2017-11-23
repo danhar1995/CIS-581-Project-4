@@ -20,4 +20,5 @@
 
 def applyGeometricTransformation(startX, startY, newXs, newYs, bbox):
   #TODO: Your code here
+  
   return Xs, Ys, newbbox
